@@ -14,9 +14,11 @@ I updated the servers and installed mysql-server and mysql-client
     sudo apt install mysql-client -y  (client)
 ￼```￼
 I enabled mysql service
+
 	sudo systemctl enable mysql
 
-On the DB server, I allowed inbound on Tcp protocol for MySql which is port 3306 installed the security script sudo mysql_secure_installation (its used to test the password and improve security)
+<p>On the DB server, I allowed inbound on Tcp protocol for MySql which is port 3306 installed the security script sudo mysql_secure_installation (its used to test the password and improve security)</P>
+
     sudo mysql (i'm able to login to mysql)
 
 I created a remote user on mysql (where % means any ip address can be used by the remote user, Password is password, i granted all priviledge on the DB * )
@@ -28,10 +30,12 @@ I created a remote user on mysql (where % means any ip address can be used by th
 ```
 So DB is created. I exited (exit) the DB 
 
-I configured Mysql server to allow connection from remote host with the below command to replace ‘127.0.0.1’ {bind address} to ‘0.0.0.0’ in the text editor
+<p>I configured Mysql server to allow connection from remote host with the below command to replace ‘127.0.0.1’ {bind address} to ‘0.0.0.0’ in the text editor.</P>
+
     sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
 I restarted mysql server 
+
     sudo systemctl restart mysql
 
 On the client server i ran below command (specifying the host ip address of the DB server) and got connected to Mysql server
@@ -42,4 +46,4 @@ On the client server i ran below command (specifying the host ip address of the 
 WIth this command,i can see the DB (test_db) i created in the DB server
 
 <!--docs link-->
-[Client Server Archi with MySql](https://docs.google.com/document/d/1Dyt_rRdf_vAMJSPSKinXfRDTVSLGd_e5KtkX7LFJN-U/edit?usp=sharing "A snippet of the Client Server Archi with MySql setup") 
+[Docs on Client Server Architecture with MySql](https://docs.google.com/document/d/1Dyt_rRdf_vAMJSPSKinXfRDTVSLGd_e5KtkX7LFJN-U/edit?usp=sharing "A snippet of the Client Server Archi with MySql setup") 
