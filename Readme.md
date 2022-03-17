@@ -30,7 +30,8 @@ I created a remote user on mysql (where % means any ip address can be used by th
 ```
 So DB is created. I exited (exit) the DB 
 
-<p>I configured Mysql server to allow connection from remote host with the below command to replace ‘127.0.0.1’ {bind address} to ‘0.0.0.0’ in the text editor.</P>
+<p>I configured Mysql server to allow connection from remote host with the below command to replace ‘127.0.0.1’ {bind address} to ‘0.0.0.0’ in the text editor. </P>
+
 
     sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
