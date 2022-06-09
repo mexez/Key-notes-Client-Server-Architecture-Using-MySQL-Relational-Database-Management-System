@@ -1,9 +1,11 @@
 ### Setup of Client-Server architecture using Mysql RDMS
 
-I will be deploying a client (send request and its expected to get a rewsponse from the server)and web server (has {web service nginx, apache, tomcat} which i installed mysql running on it making it a DB server)
+As expected on this setup, client (send request and its expected to get a rewsponse from the server)and web server (has {web service nginx, apache, tomcat} which i installed mysql running on it making it a DB server)
 <p>I demostrated the client-server concept using Mysql. I created 2 server (ubuntu OS) in AWS for the server and client.</p>
 <p>Instance ID i-0b07da4e1c8695e3a (DB_server) Public 3.143.204.220 Private 172.31.15.30 </p>  
 <p>Instance ID i-01b66bcae6b876e2c (P5_Client_Server) Public 3.145.111.141 Private 172.31.8.15 </p>
+
+Basic info on this setup;
 
 Updated the servers and installed mysql-server and mysql-client
 
@@ -28,14 +30,12 @@ I created a remote user on mysql (where % means any ip address can be used by th
     GRANT ALL PRIVILEGES ON *.* TO 'remote_user'@'%' WITH GRANT OPTION;
     FLUSH PRIVILEGES;
 ```
-So DB is created. I exited (exit) the DB 
+So DB is created. I exited the DB 
 
-<p>I configured Mysql server to allow connection from remote host with the below command to replace ‘127.0.0.1’ {bind address} to ‘0.0.0.0’ in the text editor. </P>
+<p>I configured Mysql server to allow connection from remote host with the below command to replace ‘127.0.0.1’ {bind address} to ‘0.0.0.0’ in the text editor.  and I restart mysql server </P>
 
 
     sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
-
-I restarted mysql server 
 
     sudo systemctl restart mysql
 
