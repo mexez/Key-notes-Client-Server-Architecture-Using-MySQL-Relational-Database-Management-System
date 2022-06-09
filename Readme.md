@@ -5,7 +5,7 @@ I will be deploying a client (send request and its expected to get a rewsponse f
 <p>Instance ID i-0b07da4e1c8695e3a (DB_server) Public 3.143.204.220 Private 172.31.15.30 </p>  
 <p>Instance ID i-01b66bcae6b876e2c (P5_Client_Server) Public 3.145.111.141 Private 172.31.8.15 </p>
 
-I updated the servers and installed mysql-server and mysql-client
+Updated the servers and installed mysql-server and mysql-client
 
 <!-- Code Blocks--> 
 ```server update and install mysql
@@ -13,7 +13,7 @@ I updated the servers and installed mysql-server and mysql-client
     sudo apt install mysql-server -y  (DB server)
     sudo apt install mysql-client -y  (client)
 ￼```￼
-I enabled mysql service
+enabled mysql service
 
 	sudo systemctl enable mysql
 
